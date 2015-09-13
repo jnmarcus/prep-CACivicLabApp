@@ -1,16 +1,21 @@
 /* =======================================================================
     Style References
 ======================================================================= */
-@import (reference) "../../libs/bootstrap/less/bootstrap.less";
+//@import (reference) "../../libs/bootstrap/less/bootstrap.less";
 @import (reference) "./styles/custom_variables.less";
 @import (reference) "./styles/custom_mixins.less";
+@import (reference) "./styles/colors.less";
 
 /* =======================================================================
     Base Elements
 ======================================================================= */
+@blueGray50: #ECEFF1;
+
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 20px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 20px;
+	//background-color: @blueGray50;
+	background-color: rgba(236, 239, 241, 0.48);
 }
 
 
@@ -33,13 +38,13 @@ body {
 /* ==========================================================================
     Header
 ========================================================================== */
-
+@import "elements/header/commonHeader.less";
 
 
 /* ==========================================================================
     Footer
 ========================================================================== */
-
+@import "elements/footer/commonFooter.less";
 
 
 /* ==========================================================================
