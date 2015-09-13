@@ -77,12 +77,12 @@ var filePath = {
             './libs/restangular/dist/restangular.js'
         ]
     },
-    vendorCSS: {
-        src: [
-            './libs/bootstrap/dist/css/bootstrap.css', // v3.1.1
-            './libs/font-awesome/css/font-awesome.css' // v4.1.0
-        ]
-    },
+    //vendorCSS: {
+    //    src: [
+    //        './libs/bootstrap/dist/css/bootstrap.css', // v3.1.1
+    //        './libs/font-awesome/css/font-awesome.css' // v4.1.0
+    //    ]
+    //},
     copyIndex: {
         src: './app/index.html',
         watch: './app/index.html'
@@ -308,17 +308,17 @@ gulp.task('vendorJS', function() {
 // =======================================================================
 // Vendor CSS Task
 // =======================================================================
-gulp.task('vendorCSS', function() {
-    return gulp.src(filePath.vendorCSS.src)
-    .pipe(concat('vendor.css'))
-    .on('error', handleError)
-    .pipe(minifyCSS())
-    .pipe(gulp.dest(filePath.build.dest))
-    .pipe(notify({
-        message: 'VendorCSS task complete'
-    }))
-    .pipe(connect.reload());
-});
+//gulp.task('vendorCSS', function() {
+//    return gulp.src(filePath.vendorCSS.src)
+//    .pipe(concat('vendor.css'))
+//    .on('error', handleError)
+//    .pipe(minifyCSS())
+//    .pipe(gulp.dest(filePath.build.dest))
+//    .pipe(notify({
+//        message: 'VendorCSS task complete'
+//    }))
+//    .pipe(connect.reload());
+//});
 
 
 // =======================================================================
@@ -353,7 +353,6 @@ gulp.task('watch', function() {
     gulp.watch(filePath.styles.watch, ['styles-dev']);
     gulp.watch(filePath.assets.images.watch, ['images']);
     gulp.watch(filePath.vendorJS.src, ['vendorJS']);
-    gulp.watch(filePath.vendorCSS.src, ['vendorCSS']);
     gulp.watch(filePath.copyIndex.watch, ['copyIndex']);
     gulp.watch(filePath.lint.src, ['checkstyle']);
     console.log('Watching...');
@@ -397,7 +396,7 @@ gulp.task('build-test', function(callback) {
 gulp.task('build-prod', function(callback) {
     runSequence(
         ['clean-full', 'lint', 'checkstyle'],
-        ['bundle-prod', 'styles-prod', 'images', 'fonts', 'vendorJS', 'vendorCSS', 'copyIndex', 'copyFavicon'],
+        ['bundle-prod', 'styles-prod', 'images', 'fonts', 'vendorJS', 'copyIndex', 'copyFavicon'],
         ['server'],
         callback
     );
@@ -407,7 +406,7 @@ gulp.task('build-prod', function(callback) {
 gulp.task('build', function(callback) {
     runSequence(
         ['clean-full', 'lint', 'checkstyle'],
-        ['bundle-dev', 'styles-dev', 'images', 'fonts', 'vendorJS', 'vendorCSS', 'copyIndex', 'copyFavicon'],
+        ['bundle-dev', 'styles-dev', 'images', 'fonts', 'vendorJS', 'copyIndex', 'copyFavicon'],
         ['server', 'watch'],
         callback
     );
