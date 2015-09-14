@@ -10,4 +10,4 @@ module.exports = angular.module('myApp',
     .config(require('./appRoutes'))
     .config(require('./appConfig'))
     .constant('version', require('../package.json').version)
-    .run(require('./common/common-init.js'));
+    .run(require('./app-init'));
