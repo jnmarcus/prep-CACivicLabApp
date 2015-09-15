@@ -30,6 +30,7 @@
   "browser": {
     "angular": "./libs/angular/angular.js"
   },
+  "jscsConfig": ".jscsrc",
   "devDependencies": {
     "bower": "latest",
     "browserify": "^9.0.3",

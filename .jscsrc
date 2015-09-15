@@ -28,7 +28,6 @@
         "catch",
         "typeof"
     ],
-    "requireSpaceAfterLineComment": true,
     "requireSpaceAfterBinaryOperators": true,
     "requireSpaceBeforeBinaryOperators": true,
     "requireSpaceBeforeBlockStatements": true,
@@ -36,7 +35,6 @@
     "requireSpacesInFunction": {
         "beforeOpeningCurlyBrace": true
     },
-    "validateIndentation": 4,
     "validateLineBreaks": "LF",
     "validateQuoteMarks": "'"
 }
