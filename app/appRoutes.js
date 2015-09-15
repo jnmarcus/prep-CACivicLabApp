@@ -32,7 +32,7 @@ function appRoutes($stateProvider) {
     name: 'examplePage2',
     url: '/example-page-2',
     template: '<example-page-2></example-page-2>',
-    controller: 'ExamplePage2Controller',
+    //controller: 'ExamplePage2Controller',
     data: {
       moduleClasses: 'page',
       pageClasses: 'examplePage2',
