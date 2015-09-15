@@ -7,9 +7,11 @@
     return {
       controller: 'ExamplePage2Controller', // Called from ExamplePage2Controller.js
       // controllerAs: 'ctrl',
-      bindToController: true,
-      restrict: 'EA',
-      scope: true,
+      //controllerAs: 'ExamplePage2Controller',
+      //bindToController: true,
+      restrict: 'E',
+      //scope: true,
+      scope: {},
       template: template
     };
   };
