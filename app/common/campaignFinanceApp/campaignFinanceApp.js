@@ -1,8 +1,6 @@
 //(function() {
   'use strict';
 
-  //require('../appMain/appMain');
-
   var campaignFinanceAppDirective = require('./campaignFinanceAppDirective');
   //var campaignFinanceAppDirective = require('./common/campaignFinanceApp/campaignFinanceAppDirective');
 
