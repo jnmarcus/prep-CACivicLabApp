@@ -10,6 +10,8 @@ require('angular-sanitize');
 require('domready/ready');
 require('lodash');
 require('restangular');
+require('./appMainNav/appMainNav');
+require('./appMainFooter/appMainFooter');
 
 module.exports = angular.module('common',
     [
@@ -20,10 +22,6 @@ module.exports = angular.module('common',
         'ngResource',
         'ngSanitize',
         'restangular',
-        require('./elements/header').name,
-        require('./elements/footer').name,
-        require('./constants').name,
-        require('./directives').name,
-        require('./resources').name,
-        require('./services').name
+        'appMainNavModule',
+        'appMainFooterModule'
     ]);
