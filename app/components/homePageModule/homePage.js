@@ -6,8 +6,12 @@
   var homePageDirective = require('./homePageDirective');
   var HomePageController = require('./HomePageController');
 
-  module.exports = angular.module('homePageModule', [])
-    .directive('homePage', homePageDirective)
-    .controller('HomePageController', HomePageController);
+  module.exports = angular.module('homePageModule',
+    [
+      'appMainNavModule',
+      'appMainFooterModule'
+    ])
+      .directive('homePage', homePageDirective)
+      .controller('HomePageController', HomePageController);
 
 })();
