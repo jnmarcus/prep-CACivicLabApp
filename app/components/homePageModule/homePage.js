@@ -1,5 +1,13 @@
-'use strict';
+(function() {
+  'use strict';
 // Home View
-module.exports = angular.module('components.home', [])
-    .directive('homeView', require('./homeDirective'))
-    .controller('HomeCtrl', require('./HomeController'));
+
+  //var homePageModule = require('./homePage');
+  var homePageDirective = require('./homePageDirective');
+  var HomePageController = require('./HomePageController');
+
+  module.exports = angular.module('homePageModule', [])
+    .directive('homePage', homePageDirective)
+    .controller('HomePageController', HomePageController);
+
+})();

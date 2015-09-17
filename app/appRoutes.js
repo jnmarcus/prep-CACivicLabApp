@@ -27,12 +27,11 @@ function appRoutes($stateProvider) {
     }
   };
 
-
   var examplePage1 = {
     name: 'examplePage1',
     url: '/example-page-1',
     template: '<example-page-1></example-page-1>',
-    controller: 'ExamplePage1Controller',
+    //controller: 'ExamplePage1Controller',
     data: {
       moduleClasses: 'page',
       pageClasses: 'examplePage1',

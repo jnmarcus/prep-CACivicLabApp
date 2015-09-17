@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var appMainNavModule = require('./appMainNav');
+  //var appMainNavModule = require('./appMainNav');
   var appMainNavDirective = require('./appMainNavDirective');
 
   module.exports = angular.module('appMainNavModule', [])
