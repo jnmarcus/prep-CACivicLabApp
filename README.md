@@ -1,4 +1,4 @@
-# AngularJS-Gulp-Browserify Starter App
+##Unofficial Fork of the [AngularJS-Gulp-Browserify Starter App](https://github.com/goodbomb/angular-gulp-browserify-starter) written by [@goodbomb](https://github.com/goodbomb)
 
 This Angular starter app is built with best practices in mind. The folder structure is intended to be different than the standard official AngularJS application. The application architecture follows modern design conventions from the proposal outlined here:
 
@@ -8,51 +8,44 @@ Files are grouped structurally (each section of the app being self contained wit
 
 ```
 /app
---- /assets
------- /images
------- /icons
---- /common
------- /directives
------- /constants
------- /elements (common page elements like footer and header)
------- /resources
------- /services
------- /styles
------- common.js (common module requirements)
------- common.less
---- /modules
------- index.js
------- MainController.js
------- MainController.spec.js (controller unit tests)
------- modules.less
------- /module1 (ex: home)
---------- index.js (module definition)
---------- home.html (view)
---------- home.less (styles)
---------- HomeController.js (Controller inherits from MainController)
---------- HomeController.spec.js
---------- homeDirective.js (view definition)
---------- homeRoutes.js (route definitions)
------- /module2
---------- /sub-module1
---------- /sub-module2
---------- index.js (module definition - sub-modules are required in here)
---------- module.html
---------- module.less
---------- ModuleController.js
---------- ModuleController.spec.js
---------- moduleDirective.js
---------- moduleRoutes.js (route definitions and config options for nested sub-modules)
 --- app.js
 --- app.less
 --- appConfig.js (main config file - no routes are defined here)
+--- appRoutes.js
 --- index.html
+--- /components
+------ components.js (require component modules)
+------ MainController.js
+------ MainController.spec.js (controller unit tests)
+------ /common (common components repeated throughout the application)
+--------- /styles
+--------- /appHeader
+--------- common.less
+------ /module1 (ex: home)
+--------- homePage.js (module definition)
+--------- homePage.html (view)
+--------- homePage.less (styles)
+--------- HomePageController.js (Controller inherits from MainController)
+--------- HomePageController.spec.js
+--------- homePageDirective.js (Directive definition)
+------ /module2
+--------- /sub-module1
+--------- /sub-module2
+--------- module2.js (module definition - sub-modules are required in here)
+--------- module2.html
+--------- module2.less
+--------- Module2Controller.js
+--------- Module2Controller.spec.js
+--------- module2Directive.js
+--- /assets
+------ /images
+------ /icons
 /dist (this is the gulp pipeline file output destination)
 /libs (bower components install here)
 /node_modules (npm installations go here)
 ```
 
-Each Module is self-contained and the js files are exported, combined, and minified through Browserify. Every LESS file from each module should be imported into the master ```app.less``` file in the root app directory. Likewise, each LESS file from a sub-module should be imported into the main ```modules.less``` file. The main app.less file is then processed by Gulp and a css file with a source map is pushed to the ```dist``` folder.
+Each Module is self-contained and the js files are exported, combined, and minified through Browserify. Every LESS file from each module should be imported into the master ```app.less``` file in the root app directory. The main app.less file is then processed by Gulp and a css file with a source map is pushed to the ```dist``` folder.
 
 ### Setup Instructions
 
