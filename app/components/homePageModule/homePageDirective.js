@@ -1,8 +1,9 @@
 'use strict';
 
-module.exports = function homeDirective() {
+//module.exports = function homeDirective() {
+module.exports = function homePage() {
     return {
-        controller: 'HomeCtrl', // Called from HomeController.js
+        controller: 'HomePageController', // Called from HomeController.js
         controllerAs: 'ctrl',
         bindToController: true,
         restrict: 'EA',
