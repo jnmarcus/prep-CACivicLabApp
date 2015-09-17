@@ -4,11 +4,12 @@ var angular = require('angular');
 //require('../common/campaignFinanceApp/campaignFinanceApp');
 var campaignFinanceAppDirective = require('./components/common/campaignFinanceApp/campaignFinanceAppDirective');
 
-//module.exports = angular.module('myApp',
+require('./components/components');
+
 module.exports = angular.module('campaignFinanceApp',
     [
         require('./components/common/common.js').name,
-        require('./components').name
+        'components'
     ])
     .config(require('./appRoutes'))
     .config(require('./appConfig'))
