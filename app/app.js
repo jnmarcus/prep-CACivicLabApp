@@ -2,13 +2,13 @@
 
 var angular = require('angular');
 //require('../common/campaignFinanceApp/campaignFinanceApp');
-var campaignFinanceAppDirective = require('./common/campaignFinanceApp/campaignFinanceAppDirective');
+var campaignFinanceAppDirective = require('./components/common/campaignFinanceApp/campaignFinanceAppDirective');
 
 //module.exports = angular.module('myApp',
 module.exports = angular.module('campaignFinanceApp',
     [
-        require('./common/common.js').name,
-        require('./modules').name
+        require('./components/common/common.js').name,
+        require('./components').name
     ])
     .config(require('./appRoutes'))
     .config(require('./appConfig'))
